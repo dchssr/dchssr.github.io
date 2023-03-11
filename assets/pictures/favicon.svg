@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 67.733332 67.733333"
+   version="1.1"
+   id="svg633"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+    path { fill: #6b8e23; }
+    @media (prefers-color-scheme: dark) { path { fill: #ffffff; }}
+  </style>
+  <defs
+     id="defs630" />
+  <g
+     id="layer1">
+    <g
+       id="g3337-7-6-6"
+       transform="matrix(2.9999472,0,0,2.9312888,-272.80645,-229.38699)">
+      <path
+         id="rect234-3-6-3-4-8-6"
+         d="m 90.937306,83.887289 v 4.665865 h 7.51272 l -7.51272,6.210474 v 6.598042 L 106.43145,88.553154 h 7.08381 v -4.665865 h -9.42113 z" />
+      <g
+         id="g3382-4-8-4"
+         transform="matrix(1,0,0,0.99995775,-1.3469629,1.0615946)">
+        <path
+           id="rect234-3-6-3-3-3-4-9"
+           d="m 92.284048,77.196322 v 4.666062 h 6.463688 3.112474 1.55339 l -2.69389,-4.666062 h -1.553395 -3.112471 z" />
+        <path
+           id="rect234-3-6-3-3-7-0-3-5"
+           transform="matrix(1,0,0.5,0.8660254,0,0)"
+           d="m 57.208706,89.138718 h 4.665839 v 5.387791 h -4.665839 z" />
+        <path
+           id="rect234-3-6-3-3-7-4-7-1-0"
+           transform="matrix(1,0,0.5,0.8660254,0,0)"
+           d="m 62.93288,89.138718 h 4.665839 v 5.387791 H 62.93288 Z" />
+      </g>
+    </g>
+  </g>
+</svg>
