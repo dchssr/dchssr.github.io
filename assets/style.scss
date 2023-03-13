@@ -1,0 +1,83 @@
+---
+---
+$text-color: #16161d;           // Eigengrau
+$accent1: #598200;
+
+body {
+    font-family: sans-serif;
+    color: $text-color;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    ul {
+        font-weight: bold;
+        padding-left: 0;
+        padding-bottom: 1em;
+
+        list-style-type: none;
+        align-items: baseline;
+    }
+
+    li a {
+        border: 1px solid grey;
+        padding: 1em;
+        margin: 0.5em;
+        margin-left: 0;
+        border-radius: 1em;
+
+        &[href="/"] {
+            color: white;
+            background-color: $accent1;
+	    box-shadow: 0 0 8pt grey;
+        }
+
+        &:hover {
+            color: white;
+            background-color: orangered;
+        }
+    }
+}
+
+a:link, a:visited {
+    color: $accent1;
+}
+
+p { 
+    text-align: justify;
+}
+
+blockquote {
+    color: $accent1;
+    background-color: beige;
+    margin: 0 2em;
+    border-left: 1ch solid $accent1;
+    padding: 0.5em 1em;
+}
+
+figure {
+    figcaption {
+        text-align: center;
+        color: #777777;
+    }
+}
+
+// Code blocks. This isn't an issue with inline <code>.
+.highlighter-rouge pre{
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: white;
+    background-color: $text-color;
+    border: 2px inset grey;
+    box-shadow: 0 0 1em grey;
+    padding: 2em;
+    border-radius: 2em;
+}
