@@ -1,7 +1,7 @@
 ---
 ---
 $text-color: #16161d;           // Eigengrau
-$accent1: #598200;
+$accent1: darkolivegreen;
 
 body {
     font-family: sans-serif;
@@ -41,8 +41,7 @@ nav {
         }
 
         &:hover {
-            color: white;
-            background-color: orangered;
+            background-color: #b82f00;
         }
     }
 }
