@@ -2,6 +2,7 @@
 ---
 $text-color: #16161d;           // Eigengrau
 $accent1: darkolivegreen;
+$accent2: #b82f00;
 
 body {
     font-family: sans-serif;
@@ -17,37 +18,33 @@ img {
     max-width: 100%;
 }
 
-nav {
-    ul {
-        font-weight: bold;
-        padding-left: 0;
-        padding-bottom: 1em;
+nav ul {
+    display: inline-flex;
+    font-weight: bold;
+    padding-left: 0;
+    padding-bottom: 1em;
 
-        list-style-type: none;
-        align-items: baseline;
-    }
+    list-style-type: none;
+    align-items: baseline;
 
-    li a {
-        border: 1px solid grey;
-        padding: 1em;
-        margin: 0.5em;
-        margin-left: 0;
-        border-radius: 1em;
+    a {
+	padding-right: 1em;
 
-        &[href="/"] {
-            color: white;
-            background-color: $accent1;
-	    box-shadow: 0 0 8pt grey;
-        }
-
-        &:hover {
-            background-color: #b82f00;
-        }
+	&:link {
+	    font-variant-caps: all-small-caps;
+	}
     }
 }
 
-a:link, a:visited {
+
+a:any-link {
     color: $accent1;
+    text-decoration: underline 2px;
+
+    &:hover {
+	color: $accent2;
+	text-decoration: underline overline 2px;
+    }
 }
 
 p { 
