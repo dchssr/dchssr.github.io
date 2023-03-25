@@ -3,6 +3,7 @@
 $text-color: #16161d;           // Eigengrau
 $accent1: darkolivegreen;
 $accent2: #b82f00;
+$roundedness: 1em;
 
 body {
     font-family: sans-serif;
@@ -60,9 +61,14 @@ blockquote {
 }
 
 figure {
+    img {
+	margin: auto;
+	border-radius: $roundedness;
+    }
+
     figcaption {
         text-align: center;
-        color: #777777;
+        color: #555;
     }
 }
 
@@ -75,5 +81,5 @@ figure {
     border: 2px inset grey;
     box-shadow: 0 0 1em grey;
     padding: 2em;
-    border-radius: 2em;
+    border-radius: $roundedness;
 }
