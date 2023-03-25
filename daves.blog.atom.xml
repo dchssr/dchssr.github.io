@@ -1,0 +1,28 @@
+---
+layout: "none"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://daves.blog/</id>
+  <title>Dave's.Blog</title>
+  <link href="https://daves.blog" rel="self"/>
+  <updated>{{ site.posts.first.date | date_to_xmlschema }}</updated>
+  <author>
+    <name>Dave Chesser</name>
+    <uri>https://daves.blog</uri>
+  </author>
+  <logo>/assets/pictures/de.png</logo>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll 4.2.0</generator>
+
+  {%- for post in site.posts %}
+  <entry>
+    <id>https://daves.blog{{ post.url }}</id>
+    <title>{{ post.title }}</title>
+    <link href="https://daves.blog{{ post.url }}" rel="self"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <content type="html">
+      {{ post.content | xml_escape }}
+    </content>
+  </entry>
+  {% endfor %}
+</feed>
