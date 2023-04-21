@@ -83,3 +83,12 @@ figure {
     padding: 2em;
     border-radius: $roundedness;
 }
+
+aside {
+    color: #585858;
+    font-style: italic;
+    margin-top: 1ch;
+    padding: 0 1ch;
+    border: 2px outset $text-color;
+    box-shadow: 0.5ch 0.5ch;
+}
