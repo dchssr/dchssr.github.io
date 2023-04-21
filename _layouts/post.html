@@ -14,5 +14,22 @@ layout: "default"
     {% endif %}
   </div>
 
+  {% if page.wordy %}
+  <aside>
+    <p>
+      <!-- Diarrhea of the mouth. Or fingers in this case. -->
+      This post might run on or be incoherent.
+      Feel free to
+      <a href="https://github.com/dchssr/dchssr.github.io/fork">
+	fork the site</a> and submit a pull request or
+      <a href="https://github.com/dchssr/dchssr.github.io/issues/new?title=You%20Made%20A%20Tactical%20Goof%20in%20a%20Post">
+	submit an issue</a>
+      and I'll get to correcting it when I feel like it.
+    </p>
+  </aside>
+  {% endif %}
+
+  <hr>
+
   {{content}}
 </article>

@@ -92,3 +92,8 @@ aside {
     border: 2px outset $text-color;
     box-shadow: 0.5ch 0.5ch;
 }
+
+aside.wordy {
+    border-color: $accent1;
+    box-shadow: 0.5ch 0.5ch 0 $accent1;
+}
