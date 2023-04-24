@@ -52,6 +52,26 @@ p {
     text-align: justify;
 }
 
+article > .metadata {
+    font-size: smaller;
+
+    .post-date {
+    }
+
+    .tags {
+	display: inline-block;
+	padding-left: 0;
+	list-style-type: none;
+
+	.tag {
+	    display: inline;
+	    border: 1px inset $text-color;;
+	    padding: 0 0.5ch;
+
+	}
+    }
+}
+
 blockquote {
     color: $accent1;
     background-color: beige;
