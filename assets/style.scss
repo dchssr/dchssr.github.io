@@ -82,6 +82,7 @@ blockquote {
 
 figure {
     img {
+	display: block;
 	margin: auto;
 	border-radius: $roundedness;
     }
