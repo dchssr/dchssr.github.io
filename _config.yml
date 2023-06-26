@@ -2,3 +2,8 @@ permalink: "/:categories/:title:output_ext"
 
 host: "0.0.0.0"
 autoreload: true
+
+online:
+  github:
+    name: "dchssr"
+    site_repo: "dchssr.github.io"
