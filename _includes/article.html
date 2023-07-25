@@ -1,0 +1,12 @@
+<article class="post">
+  <div class="metadata">
+    <h1 class="title">{{ page.title }}</h1>
+    <date datetime="{{ page.date | date_to_xml_schema }}">
+      {{ page.date | date_to_string }}
+    </date>
+  </div>
+
+  <hr>
+
+  {{ content }}
+</article>
