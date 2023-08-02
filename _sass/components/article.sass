@@ -1,0 +1,43 @@
+// Since my articles are written in Markdown and generated,
+// I don't get as much control over what classes are used
+// unless I write the dang thing in markup manually.
+
+article.post
+  p, li
+    font-size: 1.1rem
+    line-height: 1.5
+
+  h1, h2, h3, h4, h5, h6
+    // font-family: "Source Sans Pro"
+    font-style: italic
+    font-weight: 300
+
+  h1:not(.metadata > h1), h2
+    font-size: xx-large
+    border-bottom: 1px solid
+    padding-bottom: 0.5ch
+
+  // TODO: eventually write a post using <h3> through <h6> to see if this works.
+  h2, h3, h4, h5, h6
+    display: inline-block
+  h2
+    font-size: x-large
+  h3
+    font-size: larger
+  h4
+    font-size: large
+
+  ul
+    list-style-type: square
+
+  figure
+    img
+      max-width: 100%
+      margin: auto
+      border-radius: 2em
+    figcaption
+      text-align: center
+
+  // Syntax highlighting PROBABLY SHOULD be a separate component.
+  // I'll do that if I can find good palettes for CSS.
+  // .highlighter-rouge

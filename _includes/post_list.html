@@ -1,0 +1,10 @@
+{% if site.posts -%}
+<ul class="post-list">
+  {%- for post in site.posts %}
+  <li class="post">
+    <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}
+
