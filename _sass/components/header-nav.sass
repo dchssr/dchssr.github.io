@@ -1,0 +1,22 @@
+nav.main-nav > .nav-list
+  display: flex
+  align-items: baseline
+  align-content: space-between
+  gap: 2ch
+  padding-left: 0
+
+  list-style-type: none
+
+.entry.home
+  > .link
+    font-size: larger
+    font-weight: bold
+    text-decoration: underline
+    padding: 0.5ch 1ch
+    border-radius: 2em
+
+    &:hover
+      color: var(--bg-color)
+      background: linear-gradient(45deg, var(--accent-1), lighten($accent1, 20%))
+      border-color: transparent
+      box-shadow: 0 0 1ch var(--accent-1)
