@@ -11,12 +11,16 @@ nav.main-nav > .nav-list
   > .link
     font-size: larger
     font-weight: bold
-    text-decoration: underline
+    text-decoration: none
     padding: 0.5ch 1ch
     border-radius: 2em
+    background: linear-gradient(180deg, lighten($accent1, 20%), $accent1)
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
 
     &:hover
-      color: var(--bg-color)
-      background: linear-gradient(45deg, var(--accent-1), lighten($accent1, 20%))
+      /* color: var(--bg-color)
+      -webkit-text-fill-color: white
+      background: linear-gradient(180deg, lighten($accent1, 20%), $accent1)
       border-color: transparent
       box-shadow: 0 0 1ch var(--accent-1)
