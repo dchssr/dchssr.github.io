@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "gradient-text"
+
 // Is using Sass/SCSS variables redundant on top of CSS variables?
 // Maybe. Just maybe.
 
@@ -34,5 +36,10 @@ a:any-link
   &:hover
     color: var(--accent-2)
     text-decoration: underline overline 2px
+
+h1
+  font-weight: 300
+  font-style: italic
+  @include gradient-text(lighten($accent1, 20%), $accent1)
 
 @import components
