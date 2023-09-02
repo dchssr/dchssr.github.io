@@ -1,8 +1,13 @@
 "use strict";
 
-Array.prototype.sample = function() {
-    return this.at(Math.floor(Math.random() * this.length));
+const RNG = {
+    int:  function(limit) { return Math.floor(Math.random() * limit); },
+    roll: function(limit) { return this.int(limit) + 1; }
 }
+
+Array.prototype.sample = function() {
+    return this.at(RNG.int(this.length));
+};
 
 const FORTUNES = {
     "default": [
@@ -18,15 +23,24 @@ const FORTUNES = {
         "Mostly harmless.",
         "Free with your 99p blender!",
         // "The margins on a 99p blender would be £29 in the red you oil barrel!",
-        // "As if margins should marginalize MY RIGHT to buy a blender for 99p!"?,
+        // "As if margins should marginalize MY RIGHT to buy a blender for 99p!",
         "Can't you just crush things with a spoon?",
         "Once upon a time in a blog far far away...",
         "You encounter the Dread Gazebo. Roll for initiative.",
+        "Problems go in, technical debt comes out.",
+        "Ben's your uncle and Jemima's your aunt!",
+        "Kilroy was here. You just missed him.",
+        "My other car is a cdr.",
+        "👏 developers 👏 developers 👏 developers 👏 developers 👏",
+        "Make sure to keep your devices charged.",
+        () => `Well exc${"u".repeat(RNG.roll(12))}se me, Princess!`,
+        "Hail to the Knög!", // https://www.youtube.com/watch?v=iR9-8G_uf4s
     ],
     "halloween": [
-        "boo",
+        "boo", // AAAAAAAAAAH!
         "Are you signed up for the Skeleton Wars?",
         "Gimme some candy!",
+        "It is the Spooky Month!™",
         "🌕<br>🙌 REJOICE",
         "If you are afraid, we will look together.",
         "This message will repeat until there are none to read it.",
@@ -66,17 +80,24 @@ const FORTUNES = {
         "What is true unmakes the false.",
         "Sleep is a scavenger.",
         "ＧＯＯＤ ＮＩＧＨＴ",
-        // Be-Spooky-Without-Referencing-LOCAL58 Challenge: Failed ❌
+        "Unthinking, they move to cut his throat only to make a thousand mouths.<br>If He is silenced, we will speak for him.",
+        "Signs and wonders flood our little sky.",
+        "No stars above us; only eyes waiting to open.",
+        "There are other receivers.",
+        "This concludes our broadcast day.",
+        "ＷＥ ＢＥＧＩＮ ＯＵＲ ＢＲＯＡＤＣＡＳＴ ＤＡＹ．",
     ],
     "christmas": [
-        "Bah! Humbug", // After they try to hype us for Christmas in September, we're tired of it by the time the big day arrives. There's no way this was an actual holidy before Sears & Roebuck came around.
-        "Naughty children get coal to power their factory.", // Or is blasting all the biters in Factorio something good children do?
+        "Bah! Humbug",
+        "Naughty children get coal for their own industrial revolution.",
     ],
     "newYear": [
         `No more ${(new Date()).getFullYear()+1}! Y'all hosers can't behave!`,
     ],
-    "nsfw": [
+    "nsfw": [ // Generally for profanity, gross fortunes, or otherwise too crass for the immediate public.
         "NO PANTS WILL BE LEFT UNSHAT!",
+        "It's not a JoJo reference!",
+        `Your extra chromosome, ${["madam", "sire"].sample()}.`,
     ],
 };
 
@@ -95,14 +116,11 @@ function compileFortunes() {
         relevantFortunes.push("halloween");
         break;
     case 11: // December
-        if (NOW.getDay() > 25)
-            relevantFortunes.push("newYear");
-        else
-            relevantFortunes.push("christmas");
+        relevantFortunes.push(NOW.getDay() < 25 ? "christmas" : "newYear");
         break;
     }
 
-    // Not only did I actually find a use for flatMap() but
+    // not only did I actually find a use for flatMap() but
     // it worked the first time!
     return relevantFortunes.flatMap((k) => FORTUNES[k]);
 }
@@ -118,9 +136,5 @@ function tellFortune() {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    // let fortune = document.createElement("span");
-    // fortune.id = "fortune";
-    // fortune.innerHTML = tellFortune();
-    // document.getElementById("pageheader").appendChild(fortune);
     document.getElementById("fortune").innerHTML = tellFortune();
 });
