@@ -90,6 +90,7 @@ const FORTUNES = {
     "christmas": [
         "Bah! Humbug",
         "Naughty children get coal for their own industrial revolution.",
+        "Merry Tuesday!",
     ],
     "newYear": [
         `No more ${(new Date()).getFullYear()+1}! Y'all hosers can't behave!`,
