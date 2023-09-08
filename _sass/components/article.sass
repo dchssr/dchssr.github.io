@@ -38,6 +38,22 @@ article.post
     figcaption
       text-align: center
 
+  table
+    border: 1px solid var(--text-color)
+    border-collapse: collapse
+
+    thead
+      display: sticky
+      background-color: lightgrey
+    td
+      padding: 1ch
+      line-height: 1.5
+    tr
+      border-bottom: 1px solid var(--text-color)
+
+      &:nth-of-type(even)
+        background-color: #eeeeee
+
   // Syntax highlighting PROBABLY SHOULD be a separate component.
   // I'll do that if I can find good palettes for CSS.
   // .highlighter-rouge
