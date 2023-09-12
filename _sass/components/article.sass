@@ -27,6 +27,10 @@ article.post
   h4
     font-size: large
 
+  ul, ol
+    li:not(:last-of-type)
+      margin-bottom: 1ch
+
   ul
     list-style-type: square
 
@@ -38,10 +42,6 @@ article.post
     figcaption
       text-align: center
 
-  ul, ol
-    li:not(:last-of-type)
-      margin-bottom: 1ch
-
   table
     border: 1px solid var(--text-color)
     border-collapse: collapse
@@ -49,6 +49,7 @@ article.post
     thead
       display: sticky
       background-color: lightgrey
+      vertical-align: bottom
     td
       padding: 1ch
       line-height: 1.5
