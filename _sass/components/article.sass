@@ -48,7 +48,8 @@ article.post
 
     thead
       display: sticky
-      background-color: lightgrey
+      background-color: mix(lightgrey, $accent1, 30%)
+      color: white
       vertical-align: bottom
     td
       padding: 1ch
@@ -57,7 +58,7 @@ article.post
       border-bottom: 1px solid var(--text-color)
 
       &:nth-of-type(even)
-        background-color: #eeeeee
+        background-color: mix(#eeeeee, $accent1, 80%)
 
   // Syntax highlighting PROBABLY SHOULD be a separate component.
   // I'll do that if I can find good palettes for CSS.
