@@ -35,6 +35,8 @@ const FORTUNES = {
         "Make sure to keep your devices charged.",
         () => `Well exc${"u".repeat(RNG.roll(12))}se me, Princess!`,
         "Hail to the Knög!", // https://www.youtube.com/watch?v=iR9-8G_uf4s
+	"All good things must leave through the catflap.",
+        "Once upon a time in a blog too close for comfort...",
     ],
     "halloween": [
         "boo", // AAAAAAAAAAH!
