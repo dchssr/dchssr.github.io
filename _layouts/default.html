@@ -2,11 +2,8 @@
 <html lang="en-us" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:type"  content="article">
-    <meta property="og:url"   content="https://daves.blog{{ page.url }}">
-    <meta property="og:image" content="/assets/pictures/biglogo.png">
+    <meta name="viewport"              content="width=device-width, initial-scale=1.0">
+    {% include open_graph.html %}
     <link href="/assets/pictures/favicon.svg" rel="icon">
     <link rel="stylesheet" href="/assets/styles/normalize.css">
     <link rel="stylesheet" href="/assets/styles/main.css">

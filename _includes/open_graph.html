@@ -1,0 +1,21 @@
+{%- capture page_type -%}
+  {%- case page.layout -%}
+    {%- when "post" -%} article
+    {%- else -%}        website
+  {%- endcase -%}
+{%- endcapture -%}
+    <meta property="og:title"          content="{% if page.title %}{{ page.title }} :: {% endif %}Dave's.Blog">
+    <meta property="og:type"           content="{{ page_type }}">
+    <meta property="og:url"            content="{{ site.url}}{{ page.url }}">
+    <meta property="og:image"          content="{{ site.url }}/assets/pictures/biglogo.png">
+    <meta property="og:site_name"      content="Dave's.Blog">
+{%- if page.description %}
+    <meta property="og:description"    content="{{ page.description }}">
+{%- endif -%}
+{%- if page.layout == "post" %}
+    <meta property="article:published" content="{{ page.date | date_to_xmlschema}}">
+    <meta property="article:author"    content="Dave Chesser">
+    {%- for tag in page.tags %}
+    <meta property="article:tag"       content="{{ tag }}">
+    {%- endfor %}
+{%- endif -%}
