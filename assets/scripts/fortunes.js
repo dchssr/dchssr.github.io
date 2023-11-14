@@ -39,6 +39,7 @@ const FORTUNES = {
         "Hail to the Knög!", // https://www.youtube.com/watch?v=iR9-8G_uf4s
 	"All good things must leave through the catflap.",
         "Once upon a time in a blog too close for comfort...",
+        "We do things not because they were easy, but because we <em>thought</em> they would be easy!",
     ],
     "halloween": [
         "boo", // AAAAAAAAAAH!
