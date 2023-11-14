@@ -1,6 +1,7 @@
 ---
 title: "It's Aliiive!"
 layout: "post"
+description: "About dang time! I have SO many things to complain about!"
 ---
 
 <figure>
