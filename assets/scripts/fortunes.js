@@ -9,6 +9,8 @@ Array.prototype.sample = function() {
     return this.at(RNG.int(this.length));
 };
 
+const NOW = new Date();
+
 const FORTUNES = {
     "default": [
         "howdy",
@@ -90,9 +92,9 @@ const FORTUNES = {
         "ＷＥ ＢＥＧＩＮ ＯＵＲ ＢＲＯＡＤＣＡＳＴ ＤＡＹ．",
     ],
     "christmas": [
-        "Bah! Humbug",
+        "Bah! Humbug!",
         "Naughty children get coal for their own industrial revolution.",
-        "Merry Tuesday!",
+        `Merry ${dayOfWeek()}!`,
     ],
     "newYear": [
         `No more ${(new Date()).getFullYear()+1}! Y'all hosers can't behave!`,
@@ -104,8 +106,11 @@ const FORTUNES = {
     ],
 };
 
+function dayOfWeek() {
+    return Intl.DateTimeFormat("en-US", { weekday: "long" }).format(NOW);
+}
+
 function compileFortunes() {
-    const NOW = new Date();
     let relevantFortunes = ["default"]; // Values are keys in FORTUNES.
 
     // No canonical way to set besides reading this and a JS console.
