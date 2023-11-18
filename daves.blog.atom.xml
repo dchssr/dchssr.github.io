@@ -12,13 +12,13 @@ layout: "none"
     <uri>https://daves.blog</uri>
   </author>
   <logo>/assets/pictures/de.png</logo>
-  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll 4.2.0</generator>
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll {{ jekyll.version }}</generator>
 
   {%- for post in site.posts %}
   <entry>
     <id>https://daves.blog{{ post.url }}</id>
     <title>{{ post.title }}</title>
-    <link href="https://daves.blog{{ post.url }}" rel="self"/>
+    <link href="{{ site.url }}{{ post.url }}" rel="self"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <content type="html">
       {{ post.content | xml_escape }}
