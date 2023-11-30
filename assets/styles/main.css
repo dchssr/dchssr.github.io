@@ -1,0 +1,103 @@
+:root {
+    --light-text-color: #16161d; /* Eigengrau */
+    --light-background-color: white;
+    --light-accent-1: darkolivegreen;
+    --light-accent-2: #1d7d18;
+    --light-accent-3: #b82f00;
+    --light-accent-4: #8c5036;
+    /* TODO 2023-11-30: Figure out a good dark scheme too.
+     * The greens are a little too dark for simply inverting text/background. */
+    --font-size: 1.1rem;
+    --font-family: sans-serif; /* Using defaults. Saves bandwidth. */
+}
+
+body {
+    color: var(--light-text-color);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: var(--light-background-color);
+
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1.2rem;
+}
+
+a:any-link { color: var(--light-accent-1); }
+a:any-link:hover { color: var(--light-accent-3); }
+
+p, ol, ul, dl {
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: square;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--light-accent-1);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.nav-list {
+    display: flex;
+    align-items: baseline;
+    align-contents: space-between;
+    gap: 2ch;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.nav-list .entry.home {
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#fortune {
+    color: grey;
+    font-size: smaller;
+    font-style: italic;
+}
+
+#fortune em {
+    text-decoration: underline;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 1em;
+}
+
+figcaption {
+    color: darkgrey;
+    text-align: center;
+}
+
+table {
+    border: 1px solid var(--light-text-color);
+    border-collapse: collapse;
+    border-radius: 1em;
+}
+
+thead {
+    vertical-align: bottom;
+    color: white;
+    background-color: color-mix(in srgb, lightgrey 30%, var(--light-accent-1));
+}
+
+td {
+    padding: 1ch;
+}
+
+tr {
+    border-bottom: 1px solid var(--light-text-color)
+}
+
+tr:nth-of-type(even) {
+    background-color: color-mix(in srgb, #eee 80%, var(--light-accent-1));
+}
+
+.highlighter-rouge {
+    overflow-x: scroll;
+}
