@@ -1,0 +1,27 @@
+---
+layout: "default"
+---
+
+<h1>Glossary</h1>
+
+{% assign glossary = site.data.glossary | sort_natural %}
+
+<dl id="glossary">
+  {% for word in glossary %}
+  {% assign slug = word.term | slugify %}
+  <dt id="{{ slug }}" class="term">
+    <a class="id-selector" href="#{{ slug }}">{{ word.term }}</a>
+  </dt>
+  <dd class="definition">
+    {{ word.definition | markdownify }}
+    {% if word.related %}
+    <h1 class="related_header">Related Terms</h1>
+    {% for related in word.related %}
+    <ul class="related">
+      <li><a href="#{{ related | slugify }}">{{ related }}</a></li>
+    </ul>
+    {% endfor %}
+    {% endif %}
+  </dd>
+  {% endfor %}
+</dl>

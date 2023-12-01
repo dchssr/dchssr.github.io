@@ -1,0 +1,13 @@
+- term: "Cyberspace"
+  definition: |
+    A "virtual" location on-line such as an Internet chat-room, a
+    forum, or other resource that can be abstracted as if it were a
+    physical location.
+  related:
+    - Meatspace
+
+- term: "Meatspace"
+  definition: |
+    The physical world.
+  related:
+    - Cyberspace

@@ -25,8 +25,12 @@ body {
 a:any-link { color: var(--light-accent-1); }
 a:any-link:hover { color: var(--light-accent-3); }
 
-p, ol, ul, dl {
+p, ol, ul {
     line-height: 1.5;
+}
+
+p:first-of-type {
+    text-indent: 2ch;
 }
 
 ul {
@@ -100,4 +104,34 @@ tr:nth-of-type(even) {
 
 .highlighter-rouge {
     overflow-x: scroll;
+}
+
+blockquote {
+    color: var(--light-accent-1);
+    background-color: beige;
+
+    border: 1px solid var(--light-accent-1);
+    border-radius: 1em;
+    margin: 0;
+    padding: 0.5ch 1ch;
+}
+
+#glossary .term {
+    color: var(--light-accent-1);
+    font-weight: bold;
+    font-size: large;
+}
+
+#glossary .definition {
+    padding-bottom: 1ch;
+}
+
+#glossary .related_header {
+    font-size: medium;
+}
+
+#glossary .term:target a {
+    color: var(--light-background-color);
+    background-color: var(--light-accent-1);
+    text-decoration: none;
 }
