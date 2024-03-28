@@ -1,0 +1,27 @@
+/* iA Writer Quattro made for iA Writer
+ * https://github.com/iaolo/iA-Fonts
+ */
+
+@font-face {
+    font-family: "iA Writer Quattro";
+    src: url("quattro/iAWriterQuattroS-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "iA Writer Quattro";
+    font-style: italic;
+    src: url("quattro/iAWriterQuattroS-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "iA Writer Quattro";
+    font-weight: bold;
+    src: url("quattro/iAWriterQuattroS-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "iA Writer Quattro";
+    font-weight: bold;
+    font-style: italic;
+    src: url("quattro/iAWriterQuattroS-BoldItalic.woff") format("woff");
+}

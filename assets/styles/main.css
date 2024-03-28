@@ -1,3 +1,6 @@
+@import "fonts/ia-writer-quattro.css";
+@import "fonts/ia-writer-mono.css";
+
 :root {
     --light-text-color: #16161d; /* Eigengrau */
     --light-background-color: white;
@@ -8,7 +11,7 @@
     /* TODO 2023-11-30: Figure out a good dark scheme too.
      * The greens are a little too dark for simply inverting text/background. */
     --font-size: 1.1rem;
-    --font-family: sans-serif; /* Using defaults. Saves bandwidth. */
+    --font-family: "iA Writer Quattro";
 }
 
 body {
@@ -20,6 +23,10 @@ body {
     max-width: 40em;
     margin: 0 auto;
     padding: 1.2rem;
+}
+
+code {
+    font-family: "iA Writer Mono";
 }
 
 a:any-link { color: var(--light-accent-1); }

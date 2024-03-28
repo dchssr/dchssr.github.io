@@ -1,0 +1,27 @@
+/* iA Writer Mono made for iA Writer
+ * https://github.com/iaolo/iA-Fonts
+ */
+
+@font-face {
+    font-family: "iA Writer Mono";
+    src: url("mono/iAWriterMonoS-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "iA Writer Mono";
+    font-style: italic;
+    src: url("mono/iAWriterMonoS-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "iA Writer Mono";
+    font-weight: bold;
+    src: url("mono/iAWriterMonoS-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "iA Writer Mono";
+    font-weight: bold;
+    font-style: italic;
+    src: url("mono/iAWriterMonoS-BoldItalic.woff") format("woff");
+}
