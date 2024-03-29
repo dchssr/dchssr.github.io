@@ -1,43 +1,66 @@
+@import "palettes/modus-operandi.css";
 @import "fonts/ia-writer-quattro.css";
 @import "fonts/ia-writer-mono.css";
 
 :root {
-    --light-text-color: #16161d; /* Eigengrau */
-    --light-background-color: white;
-    --light-accent-1: darkolivegreen;
-    --light-accent-2: #1d7d18;
-    --light-accent-3: #b82f00;
-    --light-accent-4: #8c5036;
+    --color: var(--modus-operandi--fg-main);
+    --background-color: var(--modus-operandi--bg-main);
+    --light-accent-1: var(--modus-operandi--green-faint);
+    --font-family: "iA Writer Quattro";
     /* TODO 2023-11-30: Figure out a good dark scheme too.
      * The greens are a little too dark for simply inverting text/background. */
-    --font-size: 1.1rem;
-    --font-family: "iA Writer Quattro";
+    /* TODO 2024-03-28: Implement Modus Vivendi theme for dark.  */
 }
 
 body {
-    color: var(--light-text-color);
-    font-size: var(--font-size);
+    color: var(--text-color);
     font-family: var(--font-family);
-    background-color: var(--light-background-color);
+    background-color: var(--background-color);
 
-    max-width: 40em;
+    max-width: 80ch;
     margin: 0 auto;
-    padding: 1.2rem;
+    padding: 2ch;
+}
+
+::selection {
+    color: var(--modus-operandi--fg-main);
+    background-color: #bdbdbd;
 }
 
 code {
     font-family: "iA Writer Mono";
 }
 
-a:any-link { color: var(--light-accent-1); }
-a:any-link:hover { color: var(--light-accent-3); }
+/* Specify div to indicate blocks.
+ * .highlighter-rouge also appears on inline code.
+ */
+div.highlighter-rouge {
+    border: 2px outset var(--modus-operandi--border);
+    border-radius: 1ch;
+    padding: 1ch;
+    box-shadow: inset 0.5ch 0.5ch var(--modus-operandi--bg-inactive);
+    overflow-x: scroll;
+
+    & .n  { color: var(--modus-operandi--magenta); }
+    & :is(.no, .nc, .vi) { color: var(--modus-operandi--cyan-cooler); }
+    & .k { color: var(--modus-operandi--magenta-cooler); }
+    & .s2 { color: var(--modus-operandi--blue-warmer); }
+    & :is(.c, .c1) { color: var(--modus-operandi--fg-dim); }
+}
+
+a:any-link {
+    color: var(--light-accent-1);
+    text-decoration: underline;
+}
+
+a:any-link:hover {
+    /* color: var(--modus-operandi--fg-main); */
+    background-color: var(--modus-operandi--bg-green-nuanced);
+    text-decoration: underline overline;
+}
 
 p, ol, ul {
     line-height: 1.5;
-}
-
-p:first-of-type {
-    text-indent: 2ch;
 }
 
 ul {
@@ -46,8 +69,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--light-accent-1);
-    font-style: italic;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 .nav-list {
@@ -55,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: baseline;
     align-contents: space-between;
     gap: 2ch;
+    color: var(--light-accent-1);
     padding-left: 0;
     list-style-type: none;
 }
@@ -66,13 +89,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fortune {
-    color: grey;
+    color: var(--modus-operandi--fg-dim);
     font-size: smaller;
     font-style: italic;
-}
-
-#fortune em {
-    text-decoration: underline;
 }
 
 figure img {
@@ -81,12 +100,12 @@ figure img {
 }
 
 figcaption {
-    color: darkgrey;
+    color: var(--modus-operandi--fg-dim);
     text-align: center;
 }
 
 table {
-    border: 1px solid var(--light-text-color);
+    border: 1px solid var(--text-color);
     border-collapse: collapse;
     border-radius: 1em;
 }
@@ -94,7 +113,8 @@ table {
 thead {
     vertical-align: bottom;
     color: white;
-    background-color: color-mix(in srgb, lightgrey 30%, var(--light-accent-1));
+    /* background-color: color-mix(in srgb, lightgrey 30%, var(--light-accent-1)); */
+    background-color: var(--modus-operandi--olive);
 }
 
 td {
@@ -102,25 +122,28 @@ td {
 }
 
 tr {
-    border-bottom: 1px solid var(--light-text-color)
+    border-bottom: 1px solid var(---text-color)
 }
 
 tr:nth-of-type(even) {
-    background-color: color-mix(in srgb, #eee 80%, var(--light-accent-1));
-}
-
-.highlighter-rouge {
-    overflow-x: scroll;
+    /* background-color: color-mix(in srgb, #eee 80%, var(--light-accent-1)); */
+    background-color: var(--modus-operandi--bg-inactive);
 }
 
 blockquote {
     color: var(--light-accent-1);
-    background-color: beige;
+    border-left: 1ch double var(--light-accent-1);
 
-    border: 1px solid var(--light-accent-1);
-    border-radius: 1em;
     margin: 0;
-    padding: 0.5ch 1ch;
+    padding-left: 1ch;
+}
+
+blockquote footer:has(> cite) {
+    text-align: right;
+
+    &::before {
+	content: "— ";
+    }
 }
 
 #glossary .term {
@@ -138,7 +161,7 @@ blockquote {
 }
 
 #glossary .term:target a {
-    color: var(--light-background-color);
+    color: var(--background-color);
     background-color: var(--light-accent-1);
     text-decoration: none;
 }
