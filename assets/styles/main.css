@@ -3,19 +3,19 @@
 @import "fonts/ia-writer-mono.css";
 
 :root {
-    --color: var(--modus-operandi--fg-main);
-    --background-color: var(--modus-operandi--bg-main);
-    --light-accent-1: var(--modus-operandi--green-faint);
-    --font-family: "iA Writer Quattro";
+    --dave--color: var(--modus-operandi--fg-main);
+    --dave--background-color: var(--modus-operandi--bg-main);
+    --dave--accent-1: var(--modus-operandi--green-faint);
+    --dave--font-family-sans: "iA Writer Quattro", sans-serif;
     /* TODO 2023-11-30: Figure out a good dark scheme too.
      * The greens are a little too dark for simply inverting text/background. */
     /* TODO 2024-03-28: Implement Modus Vivendi theme for dark.  */
 }
 
 body {
-    color: var(--text-color);
-    font-family: var(--font-family);
-    background-color: var(--background-color);
+    color: var(--dave--color);
+    font-family: var(--dave--font-family-sans);
+    background-color: var(--dave--background-color);
 
     max-width: 80ch;
     margin: 0 auto;
@@ -49,7 +49,7 @@ div.highlighter-rouge {
 }
 
 a:any-link {
-    color: var(--light-accent-1);
+    color: var(--dave--accent-1);
     text-decoration: underline;
 }
 
@@ -68,7 +68,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--light-accent-1);
+    color: var(--dave--accent-1);
     font-weight: bold;
 }
 
@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: baseline;
     align-contents: space-between;
     gap: 2ch;
-    color: var(--light-accent-1);
+    color: var(--dave--accent-1);
     padding-left: 0;
     list-style-type: none;
 }
@@ -105,7 +105,7 @@ figcaption {
 }
 
 table {
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--dave--color);
     border-collapse: collapse;
     border-radius: 1em;
 }
@@ -113,7 +113,7 @@ table {
 thead {
     vertical-align: bottom;
     color: white;
-    /* background-color: color-mix(in srgb, lightgrey 30%, var(--light-accent-1)); */
+    /* background-color: color-mix(in srgb, lightgrey 30%, var(--dave--accent-1)); */
     background-color: var(--modus-operandi--olive);
 }
 
@@ -122,17 +122,17 @@ td {
 }
 
 tr {
-    border-bottom: 1px solid var(---text-color)
+    border-bottom: 1px solid var(---dave--color)
 }
 
 tr:nth-of-type(even) {
-    /* background-color: color-mix(in srgb, #eee 80%, var(--light-accent-1)); */
+    /* background-color: color-mix(in srgb, #eee 80%, var(--dave--accent-1)); */
     background-color: var(--modus-operandi--bg-inactive);
 }
 
 blockquote {
-    color: var(--light-accent-1);
-    border-left: 1ch double var(--light-accent-1);
+    color: var(--dave--accent-1);
+    border-left: 1ch double var(--dave--accent-1);
 
     margin: 0;
     padding-left: 1ch;
@@ -147,7 +147,7 @@ blockquote footer:has(> cite) {
 }
 
 #glossary .term {
-    color: var(--light-accent-1);
+    color: var(--dave--accent-1);
     font-weight: bold;
     font-size: large;
 }
@@ -161,8 +161,8 @@ blockquote footer:has(> cite) {
 }
 
 #glossary .term:target a {
-    color: var(--background-color);
-    background-color: var(--light-accent-1);
+    color: var(--dave--background-color);
+    background-color: var(--dave--accent-1);
     text-decoration: none;
 }
 
