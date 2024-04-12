@@ -165,3 +165,9 @@ blockquote footer:has(> cite) {
     background-color: var(--light-accent-1);
     text-decoration: none;
 }
+
+aside {
+    border: 2px groove var(--color);
+    padding: 0.5ch;
+    margin-bottom: 1ch;
+}
