@@ -3,42 +3,71 @@
 @import "fonts/ia-writer-mono.css";
 
 :root {
-    --dave--color: var(--modus-operandi--fg-main);
-    --dave--background-color: var(--modus-operandi--bg-main);
-    --dave--accent-1: var(--modus-operandi--green-faint);
-    --dave--font-family-sans: "iA Writer Quattro", sans-serif;
-    /* TODO 2023-11-30: Figure out a good dark scheme too.
-     * The greens are a little too dark for simply inverting text/background. */
     /* TODO 2024-03-28: Implement Modus Vivendi theme for dark.  */
+    color-scheme: only light;
+
+    --dave--color--fg-main: var(--modus-operandi--fg-main);
+    --dave--bg-main: var(--modus-operandi--bg-main);
+    --dave--fg-dim:  var(--modus-operandi--fg-dim);
+    --dave--bg-dim:  var(--modus-operandi--bg-inactive);
+
+    --dave--accent-1: var(--modus-operandi--olive);
+
+    --dave--fg-link:       var(--dave--accent-1);
+    --dave--fg-link-hover: var(--modus-operandi--rust);
+    --dave--bg-link:       var(--modus-operandi--bg-green-nuanced);
+    --dave--fg-selection:  var(--modus-operandi--fg-main);
+    --dave--bg-selection:  var(--modus-operandi--bg-active);
+    --dave--fg-table-head: var(--dave--bg-main);
+    --dave--bg-table-head: var(--dave--accent-1);
+    --dave--fg-blockquote: var(--modus-operandi--green);
+
+    --dave--ff-sans: "iA Writer Quattro", sans-serif;
+    --dave--ff-mono: "iA Writer Mono", monospace;
+
+    /* Parameterize ALL the things!
+     * It helps for testing things in bulk later. */
+    --dave--line-height: 1.5;
+
+    --dave--border-width: thin;
+    --dave--border-color: var(--modus-operandi--fg-main);
+    --dave--border-radius: 1ch;
+
+    /* Perhaps where the previous paramters come into full use. */
+    --dave--border: var(--dave--border-width) solid var(--dave--border-color);
+    --dave--shadow: 1ch 1ch var(--modus-operandi--bg-active);
+
+    /* Has to go in either root or html to work.  Won't in body. */
+    scrollbar-color: var(--dave--accent-1) var(--dave--bg-main);
 }
 
 body {
-    color: var(--dave--color);
-    font-family: var(--dave--font-family-sans);
-    background-color: var(--dave--background-color);
+    color: var(--dave--color--fg-main);
+    background-color: var(--dave--bg-main);
+    font-family: var(--dave--ff-sans);
+
 
     max-width: 80ch;
     margin: 0 auto;
     padding: 2ch;
+    line-height: var(--dave--line-height);
 }
 
 ::selection {
-    color: var(--modus-operandi--fg-main);
-    background-color: #bdbdbd;
+    color: var(--dave--fg-selection);
+    background-color: var(--dave--bg-selection);
 }
 
 code {
-    font-family: "iA Writer Mono";
+    font-family: var(--dave--ff-mono);
 }
 
 /* Specify div to indicate blocks.
  * .highlighter-rouge also appears on inline code.
  */
 div.highlighter-rouge {
-    border: 2px outset var(--modus-operandi--border);
-    border-radius: 1ch;
+    margin-bottom: 1lh;
     padding: 1ch;
-    box-shadow: inset 0.5ch 0.5ch var(--modus-operandi--bg-inactive);
     overflow-x: scroll;
 
     & .n  { color: var(--modus-operandi--magenta); }
@@ -48,19 +77,23 @@ div.highlighter-rouge {
     & :is(.c, .c1) { color: var(--modus-operandi--fg-dim); }
 }
 
+div.highlighter-rouge, blockquote, aside, figure img, table, aisde {
+    border: var(--dave--border);
+    box-shadow: var(--dave--shadow);
+    padding: 1ch;
+    margin-right: 1ch;
+}
+
 a:any-link {
-    color: var(--dave--accent-1);
+    color: var(--dave--fg-link);
     text-decoration: underline;
 }
 
 a:any-link:hover {
     /* color: var(--modus-operandi--fg-main); */
-    background-color: var(--modus-operandi--bg-green-nuanced);
+    color: var(--dave--fg-link-hover);
+    background-color: var(--dave--bg-link);
     text-decoration: underline overline;
-}
-
-p, ol, ul {
-    line-height: 1.5;
 }
 
 ul {
@@ -89,53 +122,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fortune {
-    color: var(--modus-operandi--fg-dim);
+    color: var(--dave--fg-dim);
     font-size: smaller;
     font-style: italic;
 }
 
 figure img {
     max-width: 100%;
-    border-radius: 1em;
 }
 
 figcaption {
-    color: var(--modus-operandi--fg-dim);
+    margin-top: 1lh;
+    color: var(--dave--fg-dim);
     text-align: center;
 }
 
 table {
-    border: 1px solid var(--dave--color);
+    margin-bottom: 1lh;
     border-collapse: collapse;
-    border-radius: 1em;
 }
 
 thead {
+    position: sticky;
+    top: 0;
     vertical-align: bottom;
-    color: white;
-    /* background-color: color-mix(in srgb, lightgrey 30%, var(--dave--accent-1)); */
-    background-color: var(--modus-operandi--olive);
+
+    color:            var(--dave--fg-table-head);
+    background-color: var(--dave--bg-table-head);
+}
+
+th {
+    padding: 4px;
+}
+
+tr {
+    border-bottom: var(--dave--border-width) solid var(---dave--color--fg-main);
+
+    &:nth-of-type(even) {
+	background-color: var(--dave--bg-dim);
+    }
 }
 
 td {
     padding: 1ch;
 }
 
-tr {
-    border-bottom: 1px solid var(---dave--color)
-}
-
-tr:nth-of-type(even) {
-    /* background-color: color-mix(in srgb, #eee 80%, var(--dave--accent-1)); */
-    background-color: var(--modus-operandi--bg-inactive);
-}
-
 blockquote {
-    color: var(--dave--accent-1);
-    border-left: 1ch double var(--dave--accent-1);
+    --border-width: 6px;
+    color: var(--dave--fg-blockquote);
+    border-left: var(--border-width) double var(--dave--fg-blockquote);
 
-    margin: 0;
-    padding-left: 1ch;
+    margin-left: 0;
+    padding-left: var(--border-width);
 }
 
 blockquote footer:has(> cite) {
@@ -161,13 +199,7 @@ blockquote footer:has(> cite) {
 }
 
 #glossary .term:target a {
-    color: var(--dave--background-color);
+    color: var(--dave--bg-main);
     background-color: var(--dave--accent-1);
     text-decoration: none;
-}
-
-aside {
-    border: 2px groove var(--color);
-    padding: 0.5ch;
-    margin-bottom: 1ch;
 }
