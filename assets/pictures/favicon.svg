@@ -10,8 +10,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <style>
-    path { fill: #6b8e23; }
-    @media (prefers-color-scheme: dark) { path { fill: #ffffff; }}
+    path { fill: #56692d; }
+    @media (prefers-color-scheme: dark) { path { fill: #9cbd6f; }}
   </style>
   <defs
      id="defs630" />
