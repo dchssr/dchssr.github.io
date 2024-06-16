@@ -11,16 +11,16 @@
     --dave--fg-dim:  var(--modus-operandi--fg-dim);
     --dave--bg-dim:  var(--modus-operandi--bg-inactive);
 
-    --dave--accent-1: var(--modus-operandi--olive);
+    --dave--accent-1: var(--modus-operandi--green-warmer);
 
     --dave--fg-link:       var(--dave--accent-1);
-    --dave--fg-link-hover: var(--modus-operandi--rust);
+    --dave--fg-link-hover: var(--modus-operandi--red-warmer);
     --dave--bg-link:       var(--modus-operandi--bg-green-nuanced);
     --dave--fg-selection:  var(--modus-operandi--fg-main);
     --dave--bg-selection:  var(--modus-operandi--bg-active);
     --dave--fg-table-head: var(--dave--bg-main);
     --dave--bg-table-head: var(--dave--accent-1);
-    --dave--fg-blockquote: var(--modus-operandi--green);
+    --dave--fg-blockquote: var(--dave--accent-1);
 
     --dave--ff-sans: "iA Writer Quattro", sans-serif;
     --dave--ff-mono: "iA Writer Mono", monospace;
