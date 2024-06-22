@@ -5,9 +5,9 @@ host: "0.0.0.0"
 autoreload: true
 
 online:
-  github:
-    name: "dchssr"
-    link: "https://github.com/dchssr"
-  linkedin:
-    name: "dchssr"
-    link: "https://linkedin.com/in/dchssr"
+  web:      "https://daves.blog"
+  github:   "dchssr" # https://github.com/{{ online.github }}
+  linkedin: "dchssr" # https://linkedin.com/in/{{ online.linkedin }}
+  bluesky:  "daves.blog" # https://bsky.app/profile/{{ online.bluesky }}
+  irc:
+    libera.chat: "deaches"
