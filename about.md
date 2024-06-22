@@ -56,4 +56,4 @@ IRC
 ## The heck does <abbr>PAQ</abbr> mean?
 
 Preëmptively-asked questions.
-Like an FAQ (frequently-asked questions) but for questions no one.
+Like an FAQ (frequently-asked questions) but for questions no one asked.
