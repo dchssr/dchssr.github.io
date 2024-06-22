@@ -1,5 +1,6 @@
 ---
 title: About Dave
+permalink: "/about"
 layout: default
 ---
 
@@ -12,7 +13,8 @@ so much or else you'll be there all night.
 [1]: https://crystal-lang.org
 
 When he's not writing esoteric incantations on a laptop,
-he draws and plays tabletop roleplaying games.
+he draws, plays tabletop roleplaying games,
+[or a number of other things](/now).
 
 
 # Colophon

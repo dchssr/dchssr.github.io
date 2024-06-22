@@ -77,11 +77,15 @@ div.highlighter-rouge {
     & :is(.c, .c1) { color: var(--modus-operandi--fg-dim); }
 }
 
-div.highlighter-rouge, blockquote, aside, figure img, table, aisde {
+div.highlighter-rouge, blockquote, aside, figure img, table, aisde, .-boxed {
     border: var(--dave--border);
     box-shadow: var(--dave--shadow);
     padding: 1ch;
     margin-right: 1ch;
+}
+
+.-rounded {
+    border-radius: 50%;
 }
 
 a:any-link {
@@ -127,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
 }
 
-figure img {
+img {
     max-width: 100%;
 }
 
