@@ -1,5 +1,7 @@
 permalink: "/:categories/:title:output_ext"
-url: "https://daves.blog"
+url: "https://deaches.net"
+name: "Deaches"
+separator: " :: "
 
 host: "0.0.0.0"
 autoreload: true

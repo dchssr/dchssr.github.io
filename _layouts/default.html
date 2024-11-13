@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link href="/daves.blog.atom.xml" rel="alternate" type="application/atom+xml" title="Dave's.Blog">
     <script src="/assets/scripts/fortunes.js"></script>
-    <title>{% if page.title %}{{ page.title }} :: {% endif %}Dave's.Blog</title>
+    <title>{% if page.title -%}
+      {{ page.title }}{{ site.separator }}
+      {%- endif -%}
+      {{ site.name }}</title>
   </head>
   <body>
+    {{ site.config.separator }}
     {% include header_nav.html %}
     <main>
 {{ content }}

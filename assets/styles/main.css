@@ -11,11 +11,12 @@
     --dave--fg-dim:  var(--modus-operandi--fg-dim);
     --dave--bg-dim:  var(--modus-operandi--bg-inactive);
 
-    --dave--accent-1: var(--modus-operandi--green-warmer);
+    --dave--accent-1: var(--modus-operandi--pink);
+    --dave--accent-2: var(--modus-operandi--cyan);
 
     --dave--fg-link:       var(--dave--accent-1);
-    --dave--fg-link-hover: var(--modus-operandi--red-warmer);
-    --dave--bg-link:       var(--modus-operandi--bg-green-nuanced);
+    --dave--fg-link-hover: var(--dave--accent-2);
+    --dave--bg-link:       var(--modus-operandi--bg-cyan-nuanced);
     --dave--fg-selection:  var(--modus-operandi--fg-main);
     --dave--bg-selection:  var(--modus-operandi--bg-active);
     --dave--fg-table-head: var(--dave--bg-main);

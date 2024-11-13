@@ -4,17 +4,11 @@ permalink: "/about"
 layout: default
 ---
 
-# About Dave
+# About Deaches
 
-**Dave Chesser** is a dude who writes code.
-Don't ask him about proper type systems or why he likes [Crystal][1]
-so much or else you'll be there all night.
-
-[1]: https://crystal-lang.org
-
-When he's not writing esoteric incantations on a laptop,
-he draws, plays tabletop roleplaying games,
-[or a number of other things](/now).
+**Dave "Deaches" Chesser** is a dude who writes code.
+When he's commiting heresies with his laptop,
+[he does a number of other things](/now).
 
 
 # Colophon
@@ -28,12 +22,11 @@ he draws, plays tabletop roleplaying games,
 
 * Source code is available on GitHub at
   [`{{ site.online.github }}/{{ site.online.github }}.github.io`][src].
-* Site generated with [Jekyll](https://jekyllrb.com/) {{ jekyll.version }}.
+* Site generated with [Jekyll {{ jekyll.version }}](https://jekyllrb.com/).
 * Hosted on GitHub Pages.
 * Markup and content Written in [GNU Emacs](https://www.gnu.org/software/emacs/).
 * Typefaced with with the [iA Writer](https://github.com/iaolo/iA-Fonts) family.
-* Colored with the [Modus Operandi](https://protesilaos.com/emacs/modus-themes-colors)
-  palette.
+* Colored with the [Modus Operandi](https://protesilaos.com/emacs/modus-themes-colors) palette.
 
 [src]: https://github.com/{{ site.online.github }}/{{ site.online.github }}.github.io
 
@@ -42,9 +35,6 @@ he draws, plays tabletop roleplaying games,
 
 GitHub
 : [{{ site.online.github }}](https://github.com/{{ site.online.github }})
-
-BlueSky
-: [@{{ site.online.bluesky }}](https://bsky.app/profile/{{ site.online.bluesky }})
 
 IRC
 : Libera Chat
